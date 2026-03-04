@@ -1,19 +1,19 @@
 export const users = [
   {
     id: "1",
-    name: "Arham Khan",
-    username: "Aarhamkhnz",
-    email: "hello@arhamkhnz.com",
-    avatar: "https://avatars.githubusercontent.com/u/43849669",
-    role: "administrator",
+    name: "KC Operator",
+    username: "operator_01",
+    email: "info@knowledge.click",
+    avatar: "https://avatars.githubusercontent.com/u/43849669", // Keeping existing avatar ID
+    role: "lead_architect",
   },
   {
     id: "2",
-    name: "Ammar Khan",
-    username: "ammarkhnz",
-    email: "hello@ammarkhnz.com",
+    name: "System Root",
+    username: "root_access",
+    email: "build@knowledge.click",
     avatar: "",
-    role: "admin",
+    role: "infrastructure_admin",
   },
 ];
 
