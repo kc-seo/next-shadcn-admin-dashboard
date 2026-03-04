@@ -1,21 +1,17 @@
 import {
-  Banknote,
-  Calendar,
-  ChartBar,
+  Activity,
+  Box,
+  Cpu,
   Fingerprint,
-  Forklift,
-  Gauge,
-  GraduationCap,
-  Kanban,
+  Globe,
   LayoutDashboard,
   Lock,
   type LucideIcon,
-  Mail,
-  MessageSquare,
-  ReceiptText,
-  ShoppingBag,
-  SquareArrowUpRight,
-  Users,
+  Network,
+  Rocket,
+  ShieldCheck,
+  Terminal,
+  Zap,
 } from "lucide-react";
 
 export interface NavSubItem {
@@ -46,117 +42,80 @@ export interface NavGroup {
 export const sidebarItems: NavGroup[] = [
   {
     id: 1,
-    label: "Dashboards",
+    label: "Command Center",
     items: [
       {
-        title: "Default",
-        url: "/dashboard/default",
+        title: "System Overview",
+        url: "/dashboard/finance", // Reusing the high-performance finance layout we just edited
         icon: LayoutDashboard,
       },
       {
-        title: "CRM",
-        url: "/dashboard/crm",
-        icon: ChartBar,
+        title: "Network Telemetry",
+        url: "/dashboard/crm", // Reusing the CRM charts we re-engineered for traffic
+        icon: Activity,
       },
       {
-        title: "Finance",
-        url: "/dashboard/finance",
-        icon: Banknote,
-      },
-      {
-        title: "Analytics",
+        title: "Global Edge Nodes",
         url: "/dashboard/coming-soon",
-        icon: Gauge,
-        comingSoon: true,
-      },
-      {
-        title: "E-commerce",
-        url: "/dashboard/coming-soon",
-        icon: ShoppingBag,
-        comingSoon: true,
-      },
-      {
-        title: "Academy",
-        url: "/dashboard/coming-soon",
-        icon: GraduationCap,
-        comingSoon: true,
-      },
-      {
-        title: "Logistics",
-        url: "/dashboard/coming-soon",
-        icon: Forklift,
+        icon: Globe,
         comingSoon: true,
       },
     ],
   },
   {
     id: 2,
-    label: "Pages",
+    label: "Architecture",
     items: [
       {
-        title: "Email",
+        title: "Infrastructure",
         url: "/dashboard/coming-soon",
-        icon: Mail,
-        comingSoon: true,
-      },
-      {
-        title: "Chat",
-        url: "/dashboard/coming-soon",
-        icon: MessageSquare,
-        comingSoon: true,
-      },
-      {
-        title: "Calendar",
-        url: "/dashboard/coming-soon",
-        icon: Calendar,
-        comingSoon: true,
-      },
-      {
-        title: "Kanban",
-        url: "/dashboard/coming-soon",
-        icon: Kanban,
-        comingSoon: true,
-      },
-      {
-        title: "Invoice",
-        url: "/dashboard/coming-soon",
-        icon: ReceiptText,
-        comingSoon: true,
-      },
-      {
-        title: "Users",
-        url: "/dashboard/coming-soon",
-        icon: Users,
-        comingSoon: true,
-      },
-      {
-        title: "Roles",
-        url: "/dashboard/coming-soon",
-        icon: Lock,
-        comingSoon: true,
-      },
-      {
-        title: "Authentication",
-        url: "/auth",
-        icon: Fingerprint,
+        icon: Cpu,
         subItems: [
-          { title: "Login v1", url: "/auth/v1/login", newTab: true },
-          { title: "Login v2", url: "/auth/v2/login", newTab: true },
-          { title: "Register v1", url: "/auth/v1/register", newTab: true },
-          { title: "Register v2", url: "/auth/v2/register", newTab: true },
+          { title: "Sovereign Stack", url: "/dashboard/coming-soon" },
+          { title: "Edge Routing", url: "/dashboard/coming-soon" },
+          { title: "Redundancy Logs", url: "/dashboard/coming-soon" },
         ],
+      },
+      {
+        title: "Authority Systems",
+        url: "/dashboard/coming-soon",
+        icon: ShieldCheck,
+        subItems: [
+          { title: "SEO Entity Map", url: "/dashboard/coming-soon" },
+          { title: "Semantic Core", url: "/dashboard/coming-soon" },
+        ],
+      },
+      {
+        title: "AI Ecosystems",
+        url: "/dashboard/coming-soon",
+        icon: Zap,
+        isNew: true,
       },
     ],
   },
   {
     id: 3,
-    label: "Misc",
+    label: "Deployment",
     items: [
       {
-        title: "Others",
+        title: "Initiate Build",
+        url: "/dashboard/coming-soon", // This is where we will put the Resend Form
+        icon: Rocket,
+        isNew: true,
+      },
+      {
+        title: "System Terminal",
         url: "/dashboard/coming-soon",
-        icon: SquareArrowUpRight,
-        comingSoon: true,
+        icon: Terminal,
+      },
+      {
+        title: "Operator Access",
+        url: "/auth",
+        icon: Fingerprint,
+        subItems: [
+          { title: "Secure Login", url: "/auth/v2/login", newTab: true },
+          { title: "Request Keys", url: "/auth/v2/register", newTab: true },
+        ],
       },
     ],
   },
